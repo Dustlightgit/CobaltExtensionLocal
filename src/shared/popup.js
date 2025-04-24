@@ -75,9 +75,6 @@ function generateSettings() {
 }
 
 function validateURL(url) {
-    if (!url.match("^https:")) {
-        url = "https://"+url
-    }
     if (!url.match("/$")) {
         url = url+"/"
     }
