@@ -95,7 +95,7 @@ export async function download() {
                             url: json.url
                         }).then(tab => {
                             api.tabs.onUpdated.addListener(function (tabId, changeInfo, updatedTab) {
-                                if (tabId === tab.id && changeInfo.status === 'complete' && !json.url.includes("twimg") && !json.url.includes("redd.it")) {
+                                if (tabId === tab.id && changeInfo.status === 'complete') {
                                     api.tabs.remove(tabId);
                                 }
                             })
